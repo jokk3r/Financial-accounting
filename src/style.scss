@@ -3,7 +3,6 @@
 $bg-color: #f1f4f5;
 $main-color: #ffffff;
 $border-color: #ffffff;
-$footer-color: rgb(31, 187, 65);
 $positive-color: #1abe52;
 $negative-color: #fb7254;
 
@@ -23,22 +22,12 @@ body {
   font-family: "Inter", sans-serif;
   font-size: 16px;
   color: black;
-  // min-height: 100vh;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-
-// img {
-//   max-width: 100%;
-//   height: auto;
-// }
-
-// a {
-//   text-decoration: none;
-//   color: inherit;
-// }
 
 ul {
   list-style: none;
@@ -54,30 +43,6 @@ p {
   padding: 0;
   margin: 0;
 }
-
-// input,
-// button {
-//   font: inherit;
-// }
-
-// .container {
-//   margin: 0 auto;
-//   width: 400px;
-// }
-
-// h1,
-// h2,
-// h3 {
-//   line-height: 1.5;
-// }
-
-// h4 {
-//   text-transform: uppercase;
-// }
-
-// main {
-//   margin-top: 30px;
-// }
 
 //**HEADER**
 header {
@@ -96,6 +61,9 @@ header {
   font-weight: 800;
 }
 
+.container {
+  width: 340px;
+}
 //**COUNT**
 .total {
   padding: 16px;
@@ -121,7 +89,6 @@ header {
   background-color: #ebf1f4;
   display: flex;
   flex-direction: column;
-  // justify-content: space-between;
   align-items: flex-start;
   padding: 12px;
   padding-left: 16px;
@@ -205,7 +172,6 @@ header {
 }
 
 .transactions__money {
-  flex: 1;
   text-align: right;
   padding-right: 10px;
 }
@@ -263,10 +229,6 @@ header {
   font-size: 15px;
 }
 
-// .operation__fields:focus {
-//   border: 1px solid darkorange;
-// }
-
 .operation__btns {
   margin-top: 12px;
   display: flex;
@@ -281,7 +243,6 @@ header {
   font-size: 17px;
   font-weight: 700;
   padding: 12px 40px;
-
   cursor: pointer;
   outline: none;
 }
@@ -306,18 +267,18 @@ header {
   color: $positive-color;
 }
 
-@media (max-width: 400px) {
+@media (min-width: 768px) {
   body {
-    // font-size: 14px;
-  }
-  .container {
-    width: 320px;
-    // padding: 10px;
+    .container {
+      width: 600px;
+    }
   }
 }
 
-@media (max-width: 320px) {
+@media (min-width: 1024px) {
   body {
-    display: none;
+    .container {
+      width: 800px;
+    }
   }
 }
