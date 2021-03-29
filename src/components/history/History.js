@@ -2,7 +2,6 @@ import React from "react";
 import HistoryItem from "./HistoryItem";
 
 function History({ transactions, addDelete }) {
-  // console.log(transactions);
   return (
     <section className="transactions">
       <h3 className="transactions__header">Transactions</h3>

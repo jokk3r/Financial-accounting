@@ -1,6 +1,5 @@
 import React from "react";
 import Total from "./components/total/Total";
-// import "./normalize.css";
 import "./style.scss";
 import History from "./components/history/History";
 import Operation from "./components/operation/Operation";
@@ -25,22 +24,11 @@ class App extends React.Component {
   }
 
   getIncome() {
-    // const newIncome = this.state.income + this.state.amount;
-    // this.setState({
-    //   income: newIncome,
-    //   balance: this.state.balance + newIncome,
-    // });
     return this.state.transactions
       .filter((item) => item.add)
       .reduce((acc, item) => item.amount + acc, 0); // acc iznachalno raven 0 i v nego idet zapic'
   }
   getExpenses() {
-    // const newExpence = this.state.expense + this.state.amount;
-    // console.log(newExpence);
-    // this.setState({
-    //   expense: newExpence,
-    //   balance: this.state.balance - newExpence,
-    // });
     return this.state.transactions
       .filter((item) => !item.add)
       .reduce((acc, item) => item.amount + acc, 0);
